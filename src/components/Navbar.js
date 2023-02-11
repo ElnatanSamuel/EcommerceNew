@@ -1,0 +1,32 @@
+import React from "react";
+import { UilShoppingBag } from "@iconscout/react-unicons";
+import { Link } from "react-router-dom";
+
+function Navbar() {
+  return (
+    <div className="flex flex-row items-center py-5 px-10 fixed w-full top-0 z-50 bg-white justify-between h-14 max-w-7xl">
+      <p className="text-xl font-bold">Logo</p>
+      <div className="flex flex-row space-x-6 font-semibold opacity-70 text-xs ">
+        <Link to="/">
+          <p className="cursor-pointer">Home</p>
+        </Link>
+        <Link to="/products">
+          <p className="cursor-pointer">Products</p>
+        </Link>
+        <p className="cursor-pointer opacity-50">Shop</p>
+        <p className="cursor-pointer opacity-50">About</p>
+        <p className="cursor-pointer opacity-50">Blog</p>
+        <p className="cursor-pointer opacity-50">Contact</p>
+      </div>
+
+      <div className=" flex flex-row items-center  space-x-4">
+        <p className="loginbtn cursor-pointer text-xs font-bold">
+          Login/Register
+        </p>
+        <UilShoppingBag className="cursor-pointer" size="20" color="#23A6F0" />
+      </div>
+    </div>
+  );
+}
+
+export default Navbar;

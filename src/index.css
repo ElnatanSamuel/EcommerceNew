@@ -1,13 +1,126 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yellowtail&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.herosection {
+  height: calc(100vh - 15.5rem);
+  background: linear-gradient(to right, #96e9fb, #abecd6);
+  margin: 6rem 10rem 2rem 10rem;
+  border-radius: 20px;
+  position: relative;
+}
+
+.herosection::-webkit-scrollbar {
+  display: none;
+}
+
+.loginbtn {
+  color: #23a6f0;
+}
+
+.heroimg {
+  height: 475px;
+  width: 475px;
+  position: absolute;
+  right: -40px;
+  top: -5px;
+}
+
+.summertxt {
+  color: #2a7cc7;
+}
+
+.shopbtn {
+  background: #23a6f0;
+  color: white;
+  border-radius: 5px;
+}
+
+.heigh {
+  height: 140px;
+  margin-bottom: 40px;
+}
+
+.card {
+  width: 350px;
+  height: 200px;
+  background: rgba(45, 139, 192, 75%);
+}
+
+.card1 {
+  width: 350px;
+  height: 150px;
+  background: rgba(45, 139, 192, 75%);
+}
+
+.cardbtn {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+}
+
+.featureimg {
+  width: 200px;
+  height: 200px;
+}
+
+.price {
+  color: #23856d;
+}
+
+.productbtn {
+  border: 1px solid #23a6f0;
+  color: #23a6f0;
+  background: transparent;
+  border-radius: 5px;
+}
+
+.getinput {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  outline: none;
+  height: 40px;
+  width: 200px;
+  padding-left: 10px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.subbtn {
+  height: 40px;
+  width: 80px;
+  outline: none;
+  background: #23a6f0;
+  color: white;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.cardimg {
+  height: 300px;
+  width: 300px;
+}
+
+.selectbtn {
+  padding: 10px 16px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.4);
+  outline: none;
+}
+
+.filterbtn {
+  padding: 10px 30px;
+  background: #23a6f0;
+  border-radius: 5px;
 }
