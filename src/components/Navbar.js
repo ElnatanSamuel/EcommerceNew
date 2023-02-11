@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <div className="flex flex-row items-center py-5 px-10 fixed w-full top-0 z-50 bg-white justify-between h-14 max-w-7xl">
-      <p className="text-xl font-bold">Logo</p>
+      <p className="text-xl font-bold">KTK2REAL</p>
       <div className="flex flex-row space-x-6 font-semibold opacity-70 text-xs ">
         <Link to="/">
           <p className="cursor-pointer">Home</p>
@@ -16,7 +16,9 @@ function Navbar() {
         <p className="cursor-pointer opacity-50">Shop</p>
         <p className="cursor-pointer opacity-50">About</p>
         <p className="cursor-pointer opacity-50">Blog</p>
-        <p className="cursor-pointer opacity-50">Contact</p>
+        <Link to="/contact">
+          <p className="cursor-pointer">Contact</p>
+        </Link>
       </div>
 
       <div className=" flex flex-row items-center  space-x-4">

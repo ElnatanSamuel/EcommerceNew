@@ -1,13 +1,16 @@
 import React from "react";
-import Feature1 from "../../assets/feature1.svg";
-import Feature2 from "../../assets/feat2.svg";
-import Feature3 from "../../assets/feat3.svg";
-import Feature4 from "../../assets/feat4.svg";
-import Feature5 from "../../assets/feat5.svg";
-import Feature6 from "../../assets/feat6.svg";
-import Feature7 from "../../assets/feat7.svg";
-import Feature8 from "../../assets/feat8.svg";
-import Feature9 from "../../assets/feat9.svg";
+import Prod1 from "../../assets/prod112.svg";
+import Feature2 from "../../assets/prod21.svg";
+import Feature3 from "../../assets/prod31.svg";
+import Feature4 from "../../assets/prod4.svg";
+import Feature5 from "../../assets/prod5.svg";
+import Feature6 from "../../assets/prod6.svg";
+import Feature7 from "../../assets/prod7.svg";
+import Feature8 from "../../assets/prod8.svg";
+import Feature9 from "../../assets/prod9.svg";
+import Feature10 from "../../assets/prod10.svg";
+import Feature11 from "../../assets/prod11.svg";
+import Feature12 from "../../assets/prod12.svg";
 import { UilShoppingBag } from "@iconscout/react-unicons";
 
 function Product() {
@@ -15,7 +18,7 @@ function Product() {
     {
       name: "Shirt",
       price: 20,
-      picture: Feature1,
+      picture: Prod1,
     },
     {
       name: "Shirt",
@@ -40,11 +43,6 @@ function Product() {
     {
       name: "Shirt",
       price: 20,
-      picture: Feature1,
-    },
-    {
-      name: "Shirt",
-      price: 20,
       picture: Feature6,
     },
     {
@@ -61,6 +59,21 @@ function Product() {
       name: "Shirt",
       price: 20,
       picture: Feature9,
+    },
+    {
+      name: "Shirt",
+      price: 20,
+      picture: Feature10,
+    },
+    {
+      name: "Shirt",
+      price: 20,
+      picture: Feature11,
+    },
+    {
+      name: "Shirt",
+      price: 20,
+      picture: Feature12,
     },
   ];
   return (
@@ -79,10 +92,10 @@ function Product() {
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-5 items-center space-x-4 justify-center px-16 pt-8">
+      <div className="grid grid-cols-5 items-center justify-center px-16 pt-8">
         {products.map((item) => {
           return (
-            <div className="flex flex-col pt-8 justify-center">
+            <div className="flex flex-col pt-8 pr-8 justify-center">
               <img className="featureimg" src={item.picture} alt="" />
               <div className="text-center pt-4 space-y-2">
                 <p className="text-sm font-bold opacity-80">{item.name}</p>
@@ -99,12 +112,22 @@ function Product() {
           );
         })}
       </div>
-      <div className="flex flex-row items-center justify-center">
-        <button>Prev</button>
-        <p>1</p>
-        <p>2</p>
-        <p>3</p>
-        <button>Next</button>
+      <div className="flex flex-row items-center justify-center pt-16">
+        <button className="pagebtn2 bg-gray-100 py-4 px-4 border border-gray-200 text-xs font-semibold">
+          Prev
+        </button>
+        <p className="px-3 py-4 border border-gray-200 text-xs font-bold text-white bg-teal-400 cursor-pointer">
+          1
+        </p>
+        <p className="px-3 py-3 border border-gray-200 text-teal-400 cursor-pointer">
+          2
+        </p>
+        <p className="px-3 py-3 border border-gray-200 text-teal-400 cursor-pointer">
+          3
+        </p>
+        <button className="pagebtn py-4 px-4 border border-gray-200 text-xs font-semibold text-teal-400 ">
+          Next
+        </button>
       </div>
     </div>
   );
