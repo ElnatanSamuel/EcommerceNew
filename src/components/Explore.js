@@ -7,7 +7,7 @@ function Explore() {
   return (
     <div className=" grid grid-cols-2 px-48 space-x-8">
       <div className=" relative">
-        <div className="card absolute bottom-16 left-0 p-10 space-y-4">
+        <div className="card absolute bottom-14 left-0 p-10 space-y-4">
           <p className="text-2xl font-bold text-white w-60">
             Top Product Of the Week
           </p>
@@ -30,7 +30,7 @@ function Explore() {
           <img src={Prod2} alt="" />
         </div>
         <div className="relative">
-          <div className="card1 absolute bottom-16 left-0 p-10 space-y-4">
+          <div className="card1 absolute bottom-12 left-0 p-10 space-y-4">
             <p className="text-xl font-bold text-white ">
               Top Product Of the Week
             </p>

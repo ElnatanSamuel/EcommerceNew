@@ -14,9 +14,11 @@ function Navbar() {
           <p className="cursor-pointer">Products</p>
         </Link>
 
-        <p className="cursor-pointer opacity-50">About</p>
+        <Link to="/about">
+          <p className="cursor-pointer">About</p>
+        </Link>
         <Link to="/blog">
-      <p className="cursor-pointer">Blog</p>
+          <p className="cursor-pointer">Blog</p>
         </Link>
         <Link to="/contact">
           <p className="cursor-pointer">Contact</p>
