@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { UilShoppingBag } from "@iconscout/react-unicons";
 import { Link } from "react-router-dom";
+import { cartContext } from "../context/Context";
 
 function Navbar() {
+  const { cart, setCart } = useContext(cartContext);
   return (
     <div className="flex flex-row items-center py-5 px-10 fixed w-full top-0 z-50 bg-white justify-between h-14 max-w-7xl">
       <p className="text-xl font-bold">KTK2REAL</p>
@@ -25,11 +27,12 @@ function Navbar() {
         </Link>
       </div>
 
-      <div className=" flex flex-row items-center  space-x-4">
+      <div className=" flex flex-row items-center  space-x-4 relative">
         <p className="loginbtn cursor-pointer text-xs font-bold">
           Login/Register
         </p>
         <UilShoppingBag className="cursor-pointer" size="20" color="#23A6F0" />
+        <p className="topbadge">{cart}</p>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Feature1 from "../assets/feature1.svg";
 import Feature2 from "../assets/feat2.svg";
 import Feature3 from "../assets/feat3.svg";
@@ -10,8 +10,17 @@ import Feature8 from "../assets/feat8.svg";
 import Feature9 from "../assets/feat9.svg";
 
 import { UilShoppingBag } from "@iconscout/react-unicons";
+import { cartContext } from "../context/Context";
 
 function Featured() {
+  const { cart, setCart, cartItems } = useContext(cartContext);
+
+  const handleCart = (item) => {
+    setCart(cart + 1);
+    cartItems.push(item);
+    console.log(cartItems);
+  };
+
   const products = [
     {
       name: "Shirt",
@@ -84,6 +93,7 @@ function Featured() {
                   className="cursor-pointer"
                   size="18"
                   color="#23856D"
+                  onClick={(e) => handleCart(item)}
                 />
               </div>
             </div>

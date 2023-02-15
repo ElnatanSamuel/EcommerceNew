@@ -16,7 +16,7 @@ body {
 }
 
 .herosection {
-  height: calc(100vh - 15.5rem);
+  height: 400px;
   background: linear-gradient(to right, #96e9fb, #abecd6);
   margin: 6rem 10rem 2rem 10rem;
   border-radius: 20px;
@@ -32,8 +32,8 @@ body {
 }
 
 .heroimg {
-  height: 475px;
-  width: 475px;
+  height: 455px;
+  width: 455px;
   position: absolute;
   right: -40px;
   top: -5px;
@@ -159,4 +159,20 @@ body {
   padding: 10px 24px;
   background: #23a6f0;
   border-radius: 5px;
+}
+
+.topbadge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background: #23a6f0;
+  border-radius: 100%;
+  color: white;
+  font-size: 8px;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
 }
