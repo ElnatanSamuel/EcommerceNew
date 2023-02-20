@@ -78,6 +78,11 @@ body {
   height: 200px;
 }
 
+.featureimg2 {
+  width: 100px;
+  height: 100px;
+}
+
 .price {
   color: #23856d;
 }
@@ -175,4 +180,27 @@ body {
   cursor: pointer;
   width: 15px;
   height: 15px;
+}
+
+.paymentside {
+  background: rgba(0, 0, 0, 0.2);
+  width: 400px;
+  height: 500px;
+  position: fixed;
+  top: 60px;
+  right: 200px;
+  border-radius: 10px;
+}
+
+.cartdrop {
+  position: absolute;
+  top: 38px;
+  right: 0px;
+  width: 350px;
+  height: 500px;
+  border-radius: 10px;
+}
+
+.cartitem {
+  height: 405px;
 }

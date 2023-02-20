@@ -20,7 +20,6 @@ function Product() {
   const handleCart = (item) => {
     setCart(cart + 1);
     cartItems.push(item);
-    console.log(cartItems);
   };
 
   const products = [

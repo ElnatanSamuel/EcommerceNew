@@ -17,8 +17,8 @@ function Featured() {
 
   const handleCart = (item) => {
     setCart(cart + 1);
+
     cartItems.push(item);
-    console.log(cartItems);
   };
 
   const products = [

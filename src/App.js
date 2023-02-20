@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import About from "./pages/About";
 import { cartContext } from "./context/Context";
+import ShowCart from "./components/ShowCart";
 
 function App() {
   const [cart, setCart] = useState(0);
@@ -30,6 +31,9 @@ function App() {
           </Routes>
           <Routes>
             <Route path="/about" element={<About />} />
+          </Routes>
+          <Routes>
+            <Route path="/basket" element={<ShowCart />} />
           </Routes>
         </div>
       </Router>
