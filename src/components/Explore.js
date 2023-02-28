@@ -2,6 +2,7 @@ import React from "react";
 import Prod1 from "../assets/prod1.svg";
 import Prod2 from "../assets/prod2.svg";
 import Prod3 from "../assets/prod3.svg";
+import { Link } from "react-router-dom";
 
 function Explore() {
   return (
@@ -11,6 +12,7 @@ function Explore() {
           <p className="text-2xl font-bold text-white w-60">
             Top Product Of the Week
           </p>
+
           <button className="cardbtn text-xs font-bold py-3 px-6">
             EXPLORE ITEMS
           </button>
@@ -23,6 +25,7 @@ function Explore() {
             <p className="text-xl font-bold text-white ">
               Top Product Of the Week
             </p>
+
             <button className="cardbtn text-xs font-bold py-3 px-6">
               EXPLORE ITEMS
             </button>
@@ -34,6 +37,7 @@ function Explore() {
             <p className="text-xl font-bold text-white ">
               Top Product Of the Week
             </p>
+
             <button className="cardbtn text-xs font-bold py-3 px-6">
               EXPLORE ITEMS
             </button>

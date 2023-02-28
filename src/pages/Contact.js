@@ -11,9 +11,8 @@ function Contact() {
           <div className=" pl-28 space-y-4">
             <p className="text-2xl text-white font-bold">CONTACT US</p>
             <p className="text-xs font-bold text-white opacity-80 ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Temporibus deserunt error, voluptatibus qui molestias alias
-              debitis tempora eum cumque ad!
+              We focus on ergonomics and meeting you where you work. It's only a
+              keystroke away.
             </p>
             <button className="contactbtn text-xs text-white font-bold">
               Contact us

@@ -2,11 +2,20 @@ import React, { useContext, useState } from "react";
 import { UilShoppingBag } from "@iconscout/react-unicons";
 import { Link } from "react-router-dom";
 import { cartContext } from "../context/Context";
-import ShowCart from "./ShowCart";
+
 import { UilTrash } from "@iconscout/react-unicons";
 
 function Navbar() {
-  const { cart, setCart, cartItems, setCartItems } = useContext(cartContext);
+  const {
+    cart,
+    setCart,
+    cartItems,
+    setCartItems,
+    login,
+    setLogin,
+    price,
+    setPrice,
+  } = useContext(cartContext);
   const [cartClicked, setCartClicked] = useState(false);
 
   const handleDelete = (item, e) => {
@@ -14,13 +23,15 @@ function Navbar() {
     const newCartItem = cartItems
       .slice(0, index)
       .concat(cartItems.slice(index + 1));
-    console.log(newCartItem);
+
     setCartItems(newCartItem);
     setCart(cart - 1);
+    setPrice(price - item.price);
   };
   const handleRemoveAll = () => {
     setCart(0);
     setCartItems([]);
+    setPrice(0);
   };
   return (
     <div className="flex flex-row items-center py-5 px-10 fixed w-full top-0 z-50 bg-white justify-between h-14 max-w-7xl">
@@ -45,7 +56,10 @@ function Navbar() {
       </div>
 
       <div className=" flex flex-row items-center  space-x-4 relative">
-        <p className="loginbtn cursor-pointer text-xs font-bold">
+        <p
+          className="loginbtn cursor-pointer text-xs font-bold"
+          onClick={() => setLogin(!login)}
+        >
           Login/Register
         </p>
 
@@ -82,14 +96,17 @@ function Navbar() {
                 );
               })}
             </div>
-            <div className="flex flex-col space-y-1 pt-4">
+            <p className="text-sm font-bold opacity-70 py-2">
+              Total Price: {price}${" "}
+            </p>
+            <div className="flex opacity-80 flex-col space-y-1 pt-4">
               <button
                 className="bg-red-600 rounded-md text-white text-sm font-bold p-2"
                 onClick={(e) => handleRemoveAll()}
               >
                 Remove all
               </button>
-              <button className="bg-black text-white rounded-md text-sm font-bold p-2">
+              <button className="bg-black opacity-80 text-white rounded-md text-sm font-bold p-2">
                 Check out
               </button>
             </div>

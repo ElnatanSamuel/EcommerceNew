@@ -15,11 +15,12 @@ import { UilShoppingBag } from "@iconscout/react-unicons";
 import { cartContext } from "../../context/Context";
 
 function Product() {
-  const { cart, setCart, cartItems } = useContext(cartContext);
+  const { cart, setCart, cartItems, price, setPrice } = useContext(cartContext);
 
   const handleCart = (item) => {
     setCart(cart + 1);
     cartItems.push(item);
+    setPrice(price + item.price);
   };
 
   const products = [

@@ -1,5 +1,6 @@
 import React from "react";
 import HeroImg from "../assets/hero-cover-1.svg";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -10,6 +11,7 @@ function Hero() {
         <p className="text-md font-light opacity-60 w-72">
           We know how large objects will act, but things on a small scale.
         </p>
+
         <button className="shopbtn font-medium py-2 px-6">SHOP NOW</button>
       </div>
       <div className="heroimg">
