@@ -1,6 +1,9 @@
-import React from "react";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import React, { useState } from "react";
+import { auth } from "../firebase";
 
 function Login() {
+  const handleFormSubmit = (e) => {};
   return (
     <div className="loginpage flex justify-center items-center h-screen">
       <div className="loginwhole flex flex-col justify-center items-center space-y-4">
@@ -14,7 +17,7 @@ function Login() {
           />
           <input
             className="inputlogin px-4 text-sm py-2"
-            type="text"
+            type="password"
             placeholder="Password"
           />
         </div>
@@ -24,7 +27,12 @@ function Login() {
             here
           </a>
         </p>
-        <button className="loginbtn2 w-52 text-xs font-bold">Login</button>
+        <button
+          className="loginbtn2 w-52 text-xs font-bold"
+          onClick={(e) => handleFormSubmit(e)}
+        >
+          Login
+        </button>
       </div>
     </div>
   );

@@ -8,7 +8,6 @@ import Feature6 from "../assets/feat6.svg";
 import Feature7 from "../assets/feat7.svg";
 import Feature8 from "../assets/feat8.svg";
 import Feature9 from "../assets/feat9.svg";
-
 import { UilShoppingBag } from "@iconscout/react-unicons";
 import { cartContext } from "../context/Context";
 

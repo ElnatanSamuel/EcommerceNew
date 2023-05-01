@@ -2,8 +2,10 @@ import React, { useContext, useState } from "react";
 import { UilShoppingBag } from "@iconscout/react-unicons";
 import { Link } from "react-router-dom";
 import { cartContext } from "../context/Context";
+import { UilUserCircle } from "@iconscout/react-unicons";
 
 import { UilTrash } from "@iconscout/react-unicons";
+import { auth } from "./firebase";
 
 function Navbar() {
   const {
@@ -15,8 +17,24 @@ function Navbar() {
     setLogin,
     price,
     setPrice,
+    authUser,
+    setAuthUser,
   } = useContext(cartContext);
+
   const [cartClicked, setCartClicked] = useState(false);
+  const [userSigned, setUserSigned] = useState(false);
+
+  const handleLogout = (e) => {
+    e.preventDefault();
+    setAuthUser(null);
+    setUserSigned(false);
+  };
+
+  const handleUserView = () => {
+    if (authUser != null) {
+      setUserSigned(!userSigned);
+    }
+  };
 
   const handleDelete = (item, e) => {
     const index = cartItems.indexOf(item);
@@ -43,26 +61,33 @@ function Navbar() {
         <Link to="/products">
           <p className="cursor-pointer">Products</p>
         </Link>
-
-        <Link to="/about">
-          <p className="cursor-pointer">About</p>
-        </Link>
-        <Link to="/blog">
-          <p className="cursor-pointer">Blog</p>
-        </Link>
-        <Link to="/contact">
-          <p className="cursor-pointer">Contact</p>
-        </Link>
       </div>
-
+      {userSigned === true ? (
+        <div className="h-32 w-60 absolute top-16 right-2 bg-white space-y-4">
+          <p className="pt-4 pl-4">Email: {authUser}</p>
+          <button
+            className="ml-4 mb-8 p-3 bg-red-600 text-white rounded-lg"
+            onClick={(e) => handleLogout(e)}
+          >
+            Logout
+          </button>
+        </div>
+      ) : null}
       <div className=" flex flex-row items-center  space-x-4 relative">
-        <p
-          className="loginbtn cursor-pointer text-xs font-bold"
-          onClick={() => setLogin(!login)}
-        >
-          Login/Register
-        </p>
-
+        {authUser === null || authUser === "" ? (
+          <p
+            className="loginbtn cursor-pointer text-xs font-bold"
+            onClick={() => setLogin(!login)}
+          >
+            Login/Register
+          </p>
+        ) : (
+          <UilUserCircle
+            size="18"
+            className="cursor-pointer"
+            onClick={(e) => handleUserView(e)}
+          />
+        )}
         <div onClick={() => setCartClicked(!cartClicked)}>
           <UilShoppingBag
             className="cursor-pointer"
